@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Poppins", monospace;
+  scroll-behavior: smooth;
+}
+
+@keyframes quick-scale {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes quick-scale-down {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes spin-logo-clockwise {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin-logo-counter-clockwise {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes floatOne {
+  0%,
+  100% {
+    transform: translateY(0px) rotate3d(-0.65, -0.2, 0.6, 25deg);
+  }
+  50% {
+    transform: translateY(20px) rotate3d(-0.65, -0.2, 0.6, 25deg);
+  }
+}
+
+@keyframes floatTwo {
+  0%,
+  100% {
+    transform: translateY(0px) rotate3d(1, 1, 0, 45deg);
+  }
+  50% {
+    transform: translateY(20px) rotate3d(1, 1, 0, 45deg);
+  }
+}
+
+@keyframes platform-float {
+  0%,
+  100% {
+    transform: translateY(30px) rotateX(100deg) rotateZ(0deg);
+  }
+  50% {
+    transform: translateY(40px) rotateX(110deg) rotateY(5deg) rotateZ(5deg);
+  }
+  75% {
+    transform: translateY(45px) rotateX(115deg) rotateZ(10deg);
+  }
+}
+@keyframes platform-float-reverse {
+  0%,
+  100% {
+    transform: translateY(30px) rotateX(100deg) rotateZ(0deg);
+    scale: 50;
+  }
+  50% {
+    transform: translateY(40px) rotateX(110deg) rotateY(5deg) rotateZ(5deg);
+    scale: 100;
+  }
+  75% {
+    transform: translateY(45px) rotateX(115deg) rotateZ(10deg);
+  }
+}
+
+.animate_rotate_clockwise {
+  animation: spin-logo-clockwise 20s ease infinite;
+}
+.animate_rotate_counter_clockwise {
+  animation: spin-logo-counter-clockwise 20s ease infinite;
+}
+.animate_quick_scale {
+  animation: quick-scale 0.2s ease-in-out;
+}
+.animate_quick_scale_down {
+  animation: quick-scale-down 0.2s ease-in-out;
+}
+.animate_platform_float {
+  animation: platform-float 10s ease infinite;
+}
+.animate_platform_float_reverse {
+  animation: platform-float-reverse 10s ease infinite;
+}
+
+/* --------------------------Home Button----------------------------------- */
+.custom-button {
+  position: relative;
+  border-radius: 15px;
+  /* font-size: 14px; */
+  /* font-weight: 600; */
+  letter-spacing: 2px;
+  overflow: hidden;
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+}
+
+@keyframes sh02 {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+.custom-button:active {
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: box-shadow 0.2s ease-in;
+  -moz-transition: box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in;
+}
+
+.neumorphic-dark {
+  background: #1f1f1f;
+  box-shadow: inset 2px 2px 5px #2e2e2e, inset -2px -2px 5px #131313,
+    2px 2px 5px #303030, -2px -2px 5px #000000;
+  color: #e2e2e2;
+  cursor: rgb(34, 34, 34) r;
+  border: 2px solid rgb(32, 32, 32);
+}
+
+.neumorphic-dark:hover {
+  outline: none;
+  box-shadow: inset 2px 2px 5px #2e2e2e, inset -2px -2px 15px #131313,
+    2px 2px 15px #303030, -2px -2px 15px #000000;
+}
+
+.neumorphic-light {
+  background-color: #e0e0e0;
+  color: #919191;
+  box-shadow: inset 4px 4px 10px #bcbcbc, inset -4px -4px 10px #ffffff;
+  color: #4d4d4d;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border: 2px solid rgb(206, 206, 206);
+}
+
+.neumorphic-light:hover {
+  box-shadow: inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff,
+    2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff;
+}
+
+.neumorphic-light:focus {
+  outline: none;
+  box-shadow: inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff,
+    2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff;
+}
+
+/* -----------Framer Motion Progress Bar----------------------- */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: var(--red);
+  transform-origin: 0%;
+}
+
+/* ------------------------THEME TOGGLE----------------------------- */
+/* From Uiverse.io by rishichawda */
+
+#theme-toggle-button {
+  width: 100%;
+  cursor: pointer;
+}
+
+/* Hide default HTML checkbox */
+#toggle {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+#container,
+#patches,
+#stars,
+#button,
+#sun,
+#moon,
+#cloud {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.25s;
+}
+
+/* night sky background */
+#toggle:checked + svg #container {
+  fill: #2b4360;
+}
+
+/* move button to right when checked */
+#toggle:checked + svg #button {
+  transform: translate(28px, 2.333px);
+}
+
+/* show/hide sun and moon based on checkbox state */
+#sun {
+  opacity: 1;
+}
+
+#toggle:checked + svg #sun {
+  opacity: 0;
+}
+
+#moon {
+  opacity: 0;
+}
+
+#toggle:checked + svg #moon {
+  opacity: 1;
+}
+
+/* show or hide background items on checkbox state */
+#cloud {
+  opacity: 1;
+}
+
+#toggle:checked + svg #cloud {
+  opacity: 0;
+}
+
+#stars {
+  opacity: 0;
+}
+
+#toggle:checked + svg #stars {
+  opacity: 1;
+}

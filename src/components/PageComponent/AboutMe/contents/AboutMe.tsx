@@ -8,7 +8,7 @@ interface Props {
 
 export const AboutMe = ({ label }: Props) => {
   return (
-    <div className="h-full">
+    <div className="h-fit flex flex-col justify-center flex-grow">
       <p className=" text-4xl animate_quick_scale mb-10 w-full text-center">
         {label}
       </p>

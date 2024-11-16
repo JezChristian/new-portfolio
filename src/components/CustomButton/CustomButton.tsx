@@ -16,7 +16,7 @@ export const CustomButton: React.FC<CustomButtonProps> = ({
   return (
     <button
       onClick={onClick}
-      className={`${className} custom-button transition-all duration-500 ${
+      className={`${className}  custom-button transition-all duration-500 ${
         isDark ? "neumorphic-dark " : "neumorphic-light"
       } `}
     >

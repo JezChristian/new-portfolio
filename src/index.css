@@ -93,6 +93,16 @@
   }
 }
 
+@keyframes regular-float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+}
+
 .animate_rotate_clockwise {
   animation: spin-logo-clockwise 20s ease infinite;
 }
@@ -110,6 +120,10 @@
 }
 .animate_platform_float_reverse {
   animation: platform-float-reverse 10s ease infinite;
+}
+
+.animate_regular_float {
+  animation: regular-float 5s ease-in-out infinite;
 }
 
 /* --------------------------Home Button----------------------------------- */
@@ -266,4 +280,18 @@
 
 #toggle:checked + svg #stars {
   opacity: 1;
+}
+
+/* ------------------ Clamping ------------------------------- */
+
+.landing-header-clamp {
+  font-size: clamp(2rem, 3vw, 20rem);
+}
+
+.landing-subheader-clamp {
+  font-size: clamp(1rem, 1vw, 4rem);
+}
+
+.button-clamp-header {
+  font-size: clamp(0.8rem, 0.8vw, 4rem);
 }

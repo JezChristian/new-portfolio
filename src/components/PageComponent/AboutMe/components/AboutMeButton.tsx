@@ -32,7 +32,7 @@ export const AboutMeButton = ({ setOnFocus, onFocus }: AboutMeButtonProps) => {
   return (
     <>
       <div
-        className={` items-center justify-end transition-all duration-500 sticky bottom-10  self-start  rounded-xl  ${
+        className={` items-center justify-end transition-all duration-500 sticky bottom-10  self-start rounded-xl  ${
           onFocus
             ? "w-full h-fit gap-10 py-5 flex flex-col pt-40"
             : "w-1/5 min-w-[280px] h-28 py-2 ml-2 scale-75 flex gap-5"
@@ -109,7 +109,7 @@ export const AboutMeButton = ({ setOnFocus, onFocus }: AboutMeButtonProps) => {
                 <span className="text-2xl flex flex-col items-center mt-2">
                   <TbTargetArrow />
                   <p className="text-[10px] -mt-2">Skills</p>
-                  {selectedItem == "Skill | Hobbies" && (
+                  {selectedItem == "Tools Used" && (
                     <div className="h-[3px] w-5 rounded-lg dark:bg-[#e2e2e2] bg-[#4D4D4D] -mt-2 mb-1 animate_quick_scale" />
                   )}
                 </span>

@@ -42,7 +42,7 @@ const AboutMeSkillsSelected = ({ selected }: AboutMeSkillsSelectedProps) => {
             <Softwares toShow={1} />
           </div>
           <p className="text-xl animate_quick_scale my-2">
-            Programming Languages
+            Programming Related Skills
           </p>
           <div className="w-full flex flex-wrap gap-3">
             <Softwares toShow={2} />
@@ -56,7 +56,7 @@ export const ToolsUsed = ({ label }: Props) => {
   const [selected, setSelected] = useState<number>(0);
 
   return (
-    <div className="h-full flex items-center flex-col ">
+    <div className="h-fit flex flex-col justify-center flex-grow">
       <p className=" text-4xl animate_quick_scale mb-10 w-full text-center">
         {label}
       </p>

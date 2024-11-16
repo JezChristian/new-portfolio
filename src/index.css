@@ -282,7 +282,7 @@
   opacity: 1;
 }
 
-/* ------------------ Clamping ------------------------------- */
+/* ------------------ Clamping Text ------------------------------- */
 
 .landing-header-clamp {
   font-size: clamp(2rem, 3vw, 20rem);

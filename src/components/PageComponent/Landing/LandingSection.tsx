@@ -14,31 +14,31 @@ export const LandingSection = () => {
 
   return (
     <div className="h-screen flex flex-col w-full overflow-hidden">
-      <div className="w-full flex flex-grow h-full justify-center items-start pt-10">
-        <div className="w-3/5 px-[4vw] h-full flex flex-col justify-center">
-          <div className="w-full text-left opacity-80 my-5 ">
-            <p className="font-semibold mt-10 landing-header-clamp leading-[4vw]">
+      <div className="w-full flex flex-col-reverse flex-grow h-full justify-center items-center pt-10 sm:flex-row">
+        <div className="w-full h-full flex flex-col justify-center px-[4vw] sm:w-3/5  bg-blue-300">
+          <div className="w-full opacity-80 my-5 text-center sm:text-left">
+            <p className="font-semibold mt-10 landing-header-clamp max-leading-[4vw] leading-8">
               Hi! I'm Jezreel Christian.
             </p>
             <p className=" font-semibold italic landing-subheader-clamp">
               To know me more, just navigate with these buttons below!.
             </p>
           </div>
-          <div className="flex flex-col gap-5 w-3/5 leading-[1vw] button-clamp-header">
+          <div className="flex flex-col gap-5 leading-[1vw] button-clamp-header w-full items-center sm:items-start sm:w-3/5 ">
             <CustomButton
               onClick={() => scrollTo("about", 50)}
-              className="w-[80%] p-[1vw] text-left h-[8vh]"
+              className="w-full p-[1vw] text-left min-h-[8vh] h-fit  sm:w-[80%]"
             >
-              <span className="uppercase font-bold button-clamp-header">
+              <p className="uppercase font-bold button-clamp-header leading-4">
                 Personal Information
-              </span>
-              <p className="italic">Who am I?</p>
+              </p>
+              <p className="italic leading-4 text-xs">Who am I?</p>
             </CustomButton>
-            <CustomButton className=" w-[65%] p-[1vw] text-left  h-[11vh]">
+            <CustomButton className="w-full p-[1vw] text-left min-h-[11vh] h-fit leading-4 sm:w-[65%]">
               <p className="uppercase font-bold button-clamp-header">
                 My Portfolio
               </p>
-              <p className="leading-[.8vw] transition-all duration-300">
+              <p className="leading-3 transition-all duration-300 text-xs">
                 Web Programmer | 3D Artist | Multimedia Artist
               </p>
             </CustomButton>
@@ -47,7 +47,6 @@ export const LandingSection = () => {
                 <p className="uppercase font-bold button-clamp-header">
                   Contact Me
                 </p>
-                <p className="italic -mt-1 button-clamp-header">Who am I?</p>
               </CustomButton>
               <CustomButton className="w-[45%] p-[1vw] text-left ">
                 <p className="uppercase font-bold button-clamp-header">

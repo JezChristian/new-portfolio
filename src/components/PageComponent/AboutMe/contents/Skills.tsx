@@ -56,11 +56,11 @@ export const ToolsUsed = ({ label }: Props) => {
   const [selected, setSelected] = useState<number>(0);
 
   return (
-    <div className="h-fit flex flex-col justify-center flex-grow">
+    <div className="h-fit flex flex-col justify-center flex-grow items-center">
       <p className=" text-4xl animate_quick_scale mb-10 w-full text-center">
         {label}
       </p>
-      <div className="w-2/3 flex items-start justify-center gap-28 animate_quick_scale_down ">
+      <div className="w-2/3 flex items-start justify-center gap-28 animate_quick_scale_down">
         <div className="flex flex-col gap-5 w-fit">
           <CustomButton
             className={`p-5 transition-all duration-1000 hover:rounded-full ${
@@ -87,7 +87,7 @@ export const ToolsUsed = ({ label }: Props) => {
             3D Softwares
           </CustomButton>
         </div>
-        <div className="flex flex-col flex-grow min-w-[450px] ">
+        <div className="flex flex-col flex-grow min-w-[450px]">
           <AboutMeSkillsSelected selected={selected} />
         </div>
       </div>

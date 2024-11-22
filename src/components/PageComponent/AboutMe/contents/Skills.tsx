@@ -18,7 +18,7 @@ const AboutMeSkillsSelected = ({ selected }: AboutMeSkillsSelectedProps) => {
           <p className="text-xl animate_quick_scale mb-5">
             Multimedia Softwares
           </p>
-          <div className="w-full flex flex-wrap gap-3">
+          <div className="w-full flex flex-wrap gap-3 justify-center lg:justify-start">
             <Softwares toShow={0} />
           </div>
         </div>
@@ -27,7 +27,7 @@ const AboutMeSkillsSelected = ({ selected }: AboutMeSkillsSelectedProps) => {
       return (
         <div className="w-full">
           <p className="text-xl animate_quick_scale mb-5">3D Softwares</p>
-          <div className="w-full flex flex-wrap gap-3">
+          <div className="w-full flex flex-wrap gap-3 justify-center lg:justify-start">
             <Softwares toShow={3} />
           </div>
         </div>
@@ -38,13 +38,13 @@ const AboutMeSkillsSelected = ({ selected }: AboutMeSkillsSelectedProps) => {
           <p className="text-xl animate_quick_scale mb-2">
             Programming Softwares
           </p>
-          <div className="w-full flex flex-wrap gap-3">
+          <div className="w-full flex flex-wrap gap-3 justify-center lg:justify-start">
             <Softwares toShow={1} />
           </div>
           <p className="text-xl animate_quick_scale my-2">
             Programming Related Skills
           </p>
-          <div className="w-full flex flex-wrap gap-3">
+          <div className="w-full flex flex-wrap gap-3 justify-center lg:justify-start">
             <Softwares toShow={2} />
           </div>
         </div>
@@ -56,38 +56,38 @@ export const ToolsUsed = ({ label }: Props) => {
   const [selected, setSelected] = useState<number>(0);
 
   return (
-    <div className="h-fit flex flex-col justify-center flex-grow items-center">
+    <div className="h-fit flex flex-col justify-center flex-grow items-center w-full">
       <p className=" text-4xl animate_quick_scale mb-10 w-full text-center">
         {label}
       </p>
-      <div className="w-2/3 flex items-start justify-center gap-28 animate_quick_scale_down">
-        <div className="flex flex-col gap-5 w-fit">
+      <div className="h-fit flex items-start justify-center animate_quick_scale_down flex-col gap-5 lg:flex-row lg:w-2/3 lg:gap-28">
+        <div className="flex w-full gap-5 justify-center flex-row flex-wrap h-fit lg:flex-col lg:w-fit">
           <CustomButton
-            className={`p-5 transition-all duration-1000 hover:rounded-full ${
+            className={`w-48 h-16 p-5 transition-all duration-1000 hover:rounded-full ${
               selected == 0 && "font-bold underline"
-            } animate-floatOne`}
+            } lg:animate-floatOne`}
             onClick={() => setSelected(0)}
           >
             Programming
           </CustomButton>
           <CustomButton
-            className={`p-5 transition-all duration-1000 hover:rounded-full ${
+            className={`w-48 h-16 p-5 transition-all duration-1000 hover:rounded-full ${
               selected == 1 && "font-bold underline"
-            } animate-floatTwo`}
+            } lg:animate-floatTwo`}
             onClick={() => setSelected(1)}
           >
             Multimedia
           </CustomButton>
           <CustomButton
-            className={`p-5 transition-all duration-1000 hover:rounded-full ${
+            className={`w-48 h-16 p-5 transition-all duration-1000 hover:rounded-full ${
               selected == 2 && "font-bold underline"
-            } animate-floatOne`}
+            } lg:animate-floatOne`}
             onClick={() => setSelected(2)}
           >
             3D Softwares
           </CustomButton>
         </div>
-        <div className="flex flex-col flex-grow min-w-[450px]">
+        <div className="flex flex-col flex-grow min-w-[250px] w-full px-10 ">
           <AboutMeSkillsSelected selected={selected} />
         </div>
       </div>

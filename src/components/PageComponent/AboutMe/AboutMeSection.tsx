@@ -6,6 +6,7 @@ import { aboutMeAtom } from "../../../atomic/atomic";
 import { EducationalBackground } from "./contents/EducationalBackground";
 import { AboutMe } from "./contents/AboutMe";
 import { ToolsUsed } from "./contents/Skills";
+import { WorkExperience } from "./contents/WorkExperience";
 
 export const AboutMeSection = () => {
   const [onFocus, setOnFocus] = useState<boolean>(true);
@@ -46,7 +47,7 @@ export const AboutMeSection = () => {
     <div
       id="about"
       ref={elementRef}
-      className={`h-screen w-full dark:text-white flex flex-col items-center transition-all duration-500 relative text-black overflow-hidden ${
+      className={`min-h-screen h-fit w-full dark:text-white flex flex-col items-center transition-all duration-500 relative text-black overflow-hidden ${
         onFocus ? "justify-center items-end" : "justify-center items-end pt-40"
       }`}
     >
@@ -62,6 +63,8 @@ const SelectedAboutMe = (selected: string) => {
       return <AboutMe label={selected} />;
     case "Educational Background":
       return <EducationalBackground label={selected} />;
+    case "Work Experience":
+      return <WorkExperience label={selected} />;
     case "Tools Used":
       return <ToolsUsed label={selected} />;
   }

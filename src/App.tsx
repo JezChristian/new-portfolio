@@ -24,6 +24,8 @@ function App() {
         <AboutMeSection />
         {/* <SampleWorks /> */}
         <ScrollToTop />
+
+        {/* Added Comment */}
       </div>
     </div>
   );

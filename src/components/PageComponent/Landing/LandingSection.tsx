@@ -12,6 +12,8 @@ export const LandingSection = () => {
   // const lastSixMonths = subMonths(new Date(), 8);
   const { scrollTo } = useScroll();
 
+  console.log("HEllo")
+
   return (
     <div className="min-h-screen h-fit flex flex-col w-full overflow-hidden">
       <div className="w-full flex flex-col-reverse flex-grow h-full justify-center items-center pt-10 sm:flex-row">

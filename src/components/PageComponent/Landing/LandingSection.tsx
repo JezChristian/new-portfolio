@@ -12,31 +12,31 @@ export const LandingSection = () => {
   // const lastSixMonths = subMonths(new Date(), 8);
   const { scrollTo } = useScroll();
 
-  console.log("HEllo")
+  console.log("HEllo");
 
   return (
     <div className="min-h-screen h-fit flex flex-col w-full overflow-hidden">
-      <div className="w-full flex flex-col-reverse flex-grow h-full justify-center items-center pt-10 sm:flex-row">
-        <div className="w-full h-full flex flex-col justify-center px-[4vw] sm:w-3/5">
-          <div className="w-full opacity-80 my-5 text-center sm:text-left">
-            <p className="font-semibold mt-10 landing-header-clamp max-leading-[4vw] leading-8">
+      <div className="w-full flex flex-grow h-full justify-center items-center pt-10 ">
+        <div className="h-full flex flex-col justify-center px-[4vw] w-3/5">
+          <div className="w-full opacity-80 my-5 text-left">
+            <p className="font-semibold mt-10 landing-header-clamp ">
               Hi! I'm Jezreel Christian.
             </p>
-            <p className=" font-semibold italic landing-subheader-clamp">
+            <p className=" font-semibold italic">
               To know me more, just navigate with these buttons below!.
             </p>
           </div>
-          <div className="flex flex-col gap-5 leading-[1vw] button-clamp-header w-full items-center sm:items-start sm:w-3/5 ">
+          <div className="flex flex-col gap-5 leading-[1vw] button-clamp-header items-start w-3/5 ">
             <CustomButton
               onClick={() => scrollTo("about", 50)}
-              className="w-full p-[2vh] text-left min-h-[8vh] h-fit  sm:w-[80%]"
+              className="p-[2vh] text-left min-h-[8vh] h-fit  w-[80%]"
             >
               <p className="uppercase font-bold button-clamp-header leading-4">
                 Personal Information
               </p>
               <p className="italic leading-4 text-xs">Who am I?</p>
             </CustomButton>
-            <CustomButton className="w-full p-[2vh] text-left min-h-[11vh] h-fit leading-4 sm:w-[65%]">
+            <CustomButton className=" p-[2vh] text-left min-h-[11vh] h-fit leading-4 w-[65%]">
               <p className="uppercase font-bold button-clamp-header">
                 My Portfolio
               </p>

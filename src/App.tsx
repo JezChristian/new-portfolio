@@ -1,11 +1,5 @@
 import { useAtomValue } from "jotai";
-import {
-  AboutMeSection,
-  Header,
-  LandingSection,
-  SampleWorks,
-  ScrollToTop,
-} from "./components";
+import { Header, LandingSection, ScrollToTop } from "./components";
 import { themeAtom } from "./atomic/atomic";
 
 function App() {
@@ -19,13 +13,11 @@ function App() {
       }`}
     >
       <Header />
-      <div className="w-full  flex flex-col items-center">
+      <div className="w-full flex flex-col items-center">
         <LandingSection />
-        <AboutMeSection />
-        {/* <SampleWorks /> */}
+        {/* <AboutMeSection />
+        <SampleWorks /> */}
         <ScrollToTop />
-
-        {/* Added Comment */}
       </div>
     </div>
   );

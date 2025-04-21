@@ -29,9 +29,6 @@ export const WorkExperience = ({ label }: Props) => {
           <p className="text-xs italic text-center lg:text-left lg:text-lg ">
             2023 - current
           </p>
-          <p className="text-xs font-semibold text-center lg:text-left lg:text-lg ">
-            &#40; almost 2 years &#41;
-          </p>
         </div>
       </div>
     </div>

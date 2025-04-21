@@ -1,25 +1,18 @@
-// import GitHubCalendar from "react-github-calendar";
-// import GitHubIcon from "@mui/icons-material/GitHub";
-// import toast from "react-hot-toast";
-// import { subMonths } from "date-fns";
 import ImageOne from "../../../assets/ImageOne.png";
 import ImageTwo from "../../../assets/ImageTwo.png";
 import ImageThree from "../../../assets/ImageThree.png";
-import { CustomButton } from "../../index";
+import { CustomButton, GitHubContributions } from "../../index";
 import { useScroll } from "../../../hooks/useScroll";
 
 export const LandingSection = () => {
-  // const lastSixMonths = subMonths(new Date(), 8);
   const { scrollTo } = useScroll();
-
-  console.log("HEllo");
 
   return (
     <div className="min-h-screen h-fit flex flex-col w-full overflow-hidden">
-      <div className="w-full flex flex-grow h-full justify-center items-center pt-10 ">
+      <div className="w-full flex flex-grow h-full justify-center items-center -mt-28">
         <div className="h-full flex flex-col justify-center px-[4vw] w-3/5">
           <div className="w-full opacity-80 my-5 text-left">
-            <p className="font-semibold mt-10 landing-header-clamp ">
+            <p className="font-semibold landing-header-clamp ">
               Hi! I'm Jezreel Christian.
             </p>
             <p className=" font-semibold italic">
@@ -29,7 +22,7 @@ export const LandingSection = () => {
           <div className="flex flex-col gap-5 leading-[1vw] button-clamp-header items-start w-3/5 ">
             <CustomButton
               onClick={() => scrollTo("about", 50)}
-              className="p-[2vh] text-left min-h-[8vh] h-fit  w-[80%]"
+              className="p-[2vh] text-left min-h-[8vh] h-fit w-[80%]"
             >
               <p className="uppercase font-bold button-clamp-header leading-4">
                 Personal Information
@@ -57,6 +50,7 @@ export const LandingSection = () => {
                 <p className="italic text-xs">Resume</p>
               </CustomButton>
             </div>
+            <GitHubContributions />
           </div>
         </div>
         <div className="w-2/5 h-full flex items-start justify-start scale-125 pt-[2vw] -ml-14">
@@ -77,40 +71,6 @@ export const LandingSection = () => {
           />
         </div>
       </div>
-      {/* <div className="w-full px-5 py-3 flex items-center justify-center mt-24">
-        <CustomButton className="w-1/2 p-10 max-w-[650px]">
-          <div className="text-lg font-bold flex gap-5 my-2">
-            <span>
-              <GitHubIcon />
-            </span>
-            <p>Github Contributions</p>
-          </div>
-          <GitHubCalendar
-            transformData={(contributions) =>
-              contributions.filter((day) => new Date(day.date) >= lastSixMonths)
-            }
-            eventHandlers={{
-              onClick: () => (activity) => {
-                toast(
-                  <div className="text-xs font-semibold italic">
-                    {activity.count} Git{" "}
-                    {activity.count > 1 ? "activities" : "activity"} on{" "}
-                    {activity.date}
-                  </div>,
-                  {
-                    icon: "👏",
-                  }
-                );
-              },
-            }}
-            colorScheme="light"
-            labels={{
-              totalCount: "{{count}} contributions in the last 8 months",
-            }}
-            username="JezChristian"
-          />
-        </CustomButton>
-      </div> */}
     </div>
   );
 };

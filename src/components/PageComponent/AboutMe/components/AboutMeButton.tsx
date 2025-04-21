@@ -35,7 +35,7 @@ export const AboutMeButton = ({ setOnFocus, onFocus }: AboutMeButtonProps) => {
       <div
         className={` items-center transition-all duration-500 sticky bottom-10  self-start rounded-xl  ${
           onFocus
-            ? "w-full h-fit gap-10 py-5 flex flex-col pt-40 justify-end "
+            ? "w-full h-fit gap-10 py-5 flex flex-col  justify-end "
             : "w-fit h-28 py-2 ml-2 scale-75 flex gap-5 justify-start"
         }`}
       >

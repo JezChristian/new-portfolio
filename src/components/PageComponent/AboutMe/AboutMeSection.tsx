@@ -12,6 +12,7 @@ export const AboutMeSection = () => {
   const [onFocus, setOnFocus] = useState<boolean>(true);
   const [, setIsVisible] = useState<boolean>(true);
   const [selectedAboutMe, setSelectedAboutMe] = useAtom(aboutMeAtom);
+
   const elementRef = useRef(null);
 
   useEffect(() => {

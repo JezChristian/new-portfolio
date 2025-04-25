@@ -1,21 +1,41 @@
-import { HiOutlineCube } from "react-icons/hi";
-import {
+import Web_BJMP from "./Web_BJMP.png";
+import CastherAd from "./Multimedia/CastherAd.mp4";
+import CastherImage from "./Multimedia/CastherImage.png";
+import BJMP from "./Multimedia/BJMP.mp4";
+import BJMPFeatures from "./Multimedia/BJMPFeatures.mp4";
+import BlobMesh from "./3D/Videos/BlobMesh.mp4";
+import BorderVideo from "./3D/Videos/BorderVideo.mp4";
+import DonutBorder from "./3D/Videos/DonutBorder.mp4";
+import FullMesh from "./3D/Videos/FullMesh.mp4";
+import SideBorder from "./3D/Videos/SideBorder.mp4";
+import SphereMesh from "./3D/Videos/SphereMesh.mp4";
+import TiltSideBorder from "./3D/Videos/TiltSideBorder.mp4";
+import Timepiece from "./3D/Videos/Timepiece.mp4";
+
+export {
+  Web_BJMP,
   BJMP,
   BJMPFeatures,
-  BlobMesh,
-  BorderVideo,
   CastherAd,
   CastherImage,
+  BlobMesh,
+  BorderVideo,
   DonutBorder,
   FullMesh,
   SideBorder,
   SphereMesh,
   TiltSideBorder,
   Timepiece,
-  Web_BJMP,
-} from "../assets";
-import { MediaType } from "../types";
-import { LuClapperboard } from "react-icons/lu";
+};
+
+export type MediaType = {
+  id: number;
+  label: string;
+  src: string;
+  type: string;
+  thumbnail?: string;
+  description?: string;
+};
 
 export const Web_Portfolio = [
   {
@@ -103,20 +123,5 @@ export const MultiMedia: MediaType[] = [
     label: "3D Video Animation Output 8",
     src: Timepiece,
     type: "vid",
-  },
-];
-
-export const CategorySelection = [
-  {
-    label: "Web Apps",
-    icon: <p className="text-xs text-left">&lt;&#8725;&gt;</p>,
-  },
-  {
-    label: "Multimedia",
-    icon: <LuClapperboard />,
-  },
-  {
-    label: "3D Works",
-    icon: <HiOutlineCube />,
   },
 ];

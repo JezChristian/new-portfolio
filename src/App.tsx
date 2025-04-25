@@ -3,6 +3,7 @@ import {
   AboutMeSection,
   Header,
   LandingSection,
+  SampleWorks,
   ScrollToTop,
 } from "./components";
 import { themeAtom } from "./atomic/atomic";
@@ -21,7 +22,7 @@ function App() {
       <div className="w-full flex flex-col items-center">
         <LandingSection />
         <AboutMeSection />
-        {/* <SampleWorks /> */}
+        <SampleWorks />
         <ScrollToTop />
       </div>
     </div>

@@ -7,6 +7,7 @@ interface CustomButtonProps extends PropsWithChildren {
   onClick?: () => void;
   disabled?: boolean;
   style?: CSSProperties;
+  id: string;
 }
 
 export const CustomButton: React.FC<CustomButtonProps> = ({
@@ -15,14 +16,18 @@ export const CustomButton: React.FC<CustomButtonProps> = ({
   className,
   style,
   disabled = false,
+  id,
 }) => {
   const isDark = useAtomValue(themeAtom);
   return (
     <button
+      id={id}
       style={style}
       onClick={onClick}
       className={`${className}  custom-button transition-all duration-500 ${
-        isDark ? "neumorphic-dark " : "neumorphic-light"
+        isDark
+          ? "neumorphic-dark ~rounded-md/xl"
+          : "neumorphic-light ~rounded-md/xl"
       } `}
       disabled={disabled}
     >

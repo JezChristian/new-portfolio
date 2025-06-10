@@ -104,6 +104,24 @@
   }
 }
 
+@keyframes error-wiggle {
+  0% {
+    transform: translateX(-2px);
+  }
+  30% {
+    transform: translateX(2px);
+  }
+  60% {
+    transform: translateX(-2px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.animate_error_wiggle {
+  animation: error-wiggle 0.2s ease;
+}
 .animate_rotate_clockwise {
   animation: spin-logo-clockwise 20s ease infinite;
 }
@@ -130,7 +148,7 @@
 /* --------------------------Home Button----------------------------------- */
 .custom-button {
   position: relative;
-  border-radius: 15px;
+  /* border-radius: 15px; */
   /* font-size: 14px; */
   /* font-weight: 600; */
   letter-spacing: 2px;

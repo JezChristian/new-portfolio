@@ -63,6 +63,7 @@ export const ToolsUsed = ({ label }: Props) => {
       <div className="h-fit flex items-start justify-center animate_quick_scale_down flex-col gap-5 lg:flex-row lg:w-2/3 lg:gap-28">
         <div className="flex w-full gap-5 justify-center flex-row flex-wrap h-fit lg:flex-col lg:w-fit">
           <CustomButton
+            id="programming-button"
             className={`w-48 h-16 p-5 transition-all duration-1000 hover:rounded-full ${
               selected == 0 && "font-bold underline"
             } lg:animate-floatOne`}
@@ -71,6 +72,7 @@ export const ToolsUsed = ({ label }: Props) => {
             Programming
           </CustomButton>
           <CustomButton
+            id="multi-media-button"
             className={`w-48 h-16 p-5 transition-all duration-1000 hover:rounded-full ${
               selected == 1 && "font-bold underline"
             } lg:animate-floatTwo`}
@@ -79,6 +81,7 @@ export const ToolsUsed = ({ label }: Props) => {
             Multimedia
           </CustomButton>
           <CustomButton
+            id="3d-softwares-button"
             className={`w-48 h-16 p-5 transition-all duration-1000 hover:rounded-full ${
               selected == 2 && "font-bold underline"
             } lg:animate-floatOne`}

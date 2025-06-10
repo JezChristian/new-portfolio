@@ -35,13 +35,17 @@ const Platform = ({
       <p className="~text-3xl/5xl font-semibold text-center">{selectedWork}</p>
       <div className="flex h-fit justify-center gap-5 items-center w-full">
         <CustomButton
+          id="prev-expanded-button"
           className="lg:flex hidden  w-fit h-52 text-3xl px-4 items-center justify-center animate_quick_scale"
           onClick={prevItemHandler}
         >
           <IoChevronBackCircleOutline />
         </CustomButton>
         <div>
-          <CustomButton className="h-fit px-5 pt-2 pb-6 transition-all duration-700 w-fit ">
+          <CustomButton
+            id="selected-categ-button"
+            className="h-fit px-5 pt-2 pb-6 transition-all duration-700 w-fit "
+          >
             <div className=" flex flex-col gap-5 relative items-center">
               <p className="~text-lg/xl ~leading-5/7 font-semibold sticky top-0 max-w-[500px]">
                 {selectedCategory?.[selectedIndex].label}
@@ -51,12 +55,14 @@ const Platform = ({
           </CustomButton>
           <div className="lg:hidden flex w-full mt-5 gap-5 animate_quick_scale">
             <CustomButton
+              id="prev-button"
               className="flex flex-grow h-14 text-3xl px-4 items-center justify-center"
               onClick={prevItemHandler}
             >
               <IoChevronBackCircleOutline />
             </CustomButton>
             <CustomButton
+              id="next-button"
               className="flex flex-grow h-14 text-3xl px-4 items-center justify-center"
               onClick={nextItemHandler}
             >
@@ -65,6 +71,7 @@ const Platform = ({
           </div>
         </div>
         <CustomButton
+          id="next-expanded-button"
           className="lg:flex hidden  w-fit h-52 text-3xl px-4 items-center justify-center animate_quick_scale"
           onClick={nextItemHandler}
         >
@@ -99,7 +106,11 @@ const ContentTypeIdentifyer = ({ item }: ContentTypeIdentifyerProp) => {
   return (
     <div className="self-center w-full items-center justify-center flex flex-col">
       {item?.type == "img" ? (
-        <img className="w-64 h-auto aspect-square rounded-md" src={item?.src} />
+        <img
+          alt={item?.src}
+          className="w-64 h-auto aspect-square rounded-md"
+          src={item?.src}
+        />
       ) : (
         <>
           <video

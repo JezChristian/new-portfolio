@@ -35,9 +35,10 @@ export const SelectionList = ({
             }`}
           >
             <CustomButton
+              id={category.label}
               disabled={index === 2}
               onClick={() => handleSelection(index)}
-              className="text-lg flex items-center justify-center w-fit h-14"
+              className="text-lg flex items-center justify-center w-fit h-14 disabled:cursor-not-allowed"
             >
               <span className="text-2xl flex items-center gap-2 px-2 rounded-none">
                 {category.icon}

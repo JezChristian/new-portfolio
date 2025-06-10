@@ -2,12 +2,7 @@ import { useState } from "react";
 import { useTypeWriter } from "../../hooks/useTypeWriter";
 import { Tooltip } from "@mui/material";
 import { useScroll } from "../../hooks/useScroll";
-import {
-  FaFacebookSquare,
-  FaGithubSquare,
-  FaInstagramSquare,
-  FaLinkedin,
-} from "react-icons/fa";
+import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 
 import { FaSquareGitlab } from "react-icons/fa6";
 import { ThemeToggle } from "../ThemeToggle/ThemeToggle";
@@ -59,13 +54,11 @@ export const Header = () => {
       </div>
       <div className="h-fit w-full">
         <div
-          className={`flex text-2xl gap-2 py-2 justify-evenly self-end w-[230px] rounded-b-lg shadow-md bg-white bg-opacity-5  backdrop-blur-sm ${
+          className={`flex ~text-2xl/3xl  py-2 justify-evenly self-end w-fit px-5 gap-5 rounded-b-lg shadow-md bg-white bg-opacity-5  backdrop-blur-sm ${
             isScrolled &&
             "shadow-lg bg-white bg-opacity-40  backdrop-blur-sm self-end"
           }`}
         >
-          <FaFacebookSquare />
-          <FaInstagramSquare />
           <FaLinkedin />
           <FaGithubSquare />
           <FaSquareGitlab />

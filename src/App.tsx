@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import {
   AboutMeSection,
+  ContactMe,
   LandingSection,
   SampleWorks,
   ScrollToTop,
@@ -26,6 +27,7 @@ function App() {
       <LandingSection />
       <AboutMeSection />
       <SampleWorks />
+      <ContactMe />
       <ScrollToTop />
     </Layout>
   );

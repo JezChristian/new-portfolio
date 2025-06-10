@@ -14,7 +14,7 @@ export const ContactMe = () => {
 
   const submitFormHandler = (value: ContactMeType) => {
     console.log("Submitted Values : ", value);
-    toast.success("Sample Send Success", {
+    toast.success("Sample Send Success. ( Not yet working :) )", {
       position: "top-center",
       id: "toast-update-account-success",
     });

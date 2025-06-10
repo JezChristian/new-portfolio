@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import {
   AboutMeSection,
   ContactMe,
+  Footer,
   LandingSection,
   SampleWorks,
   ScrollToTop,
@@ -41,6 +42,7 @@ function App() {
           <SampleWorks />
           <ContactMe />
           <ScrollToTop />
+          <Footer />
         </>
       )}
     </Layout>

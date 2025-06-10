@@ -1,4 +1,5 @@
 export * from "./Header/Header";
+export * from "./Footer/Footer";
 export * from "./CustomButton/CustomButton";
 export * from "./ScrollToTop/ScrollToTop";
 export * from "./GitHub/GitHubContributions";

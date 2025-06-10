@@ -1,25 +1,13 @@
-import { useState } from "react";
-import { useTypeWriter } from "../../hooks/useTypeWriter";
-import { Tooltip } from "@mui/material";
 import { useScroll } from "../../hooks/useScroll";
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
-
 import { FaSquareGitlab } from "react-icons/fa6";
 import { ThemeToggle } from "../ThemeToggle/ThemeToggle";
 import { useAtom } from "jotai";
 import { themeAtom } from "../../atomic/atomic";
 
 export const Header = () => {
-  const [toggle, setToggle] = useState<boolean>(true);
   const [isDarkMode, setIsDarkMode] = useAtom<boolean>(themeAtom);
-
   const { isScrolled } = useScroll();
-  const text = useTypeWriter({
-    WordToType: "Welcome to my Portfolio!",
-    speed: 100,
-    interval: 10000,
-    toggle: toggle,
-  });
 
   const handleTheme = () => {
     setIsDarkMode(!isDarkMode);
@@ -33,15 +21,8 @@ export const Header = () => {
           isScrolled && "shadow-lg bg-white bg-opacity-40 text-black"
         }`}
       >
-        <p
-          onClick={() => setToggle(!toggle)}
-          className="cursor-pointer w-1/2 leading-4 dark:text-white"
-        >
-          <Tooltip
-            title={`Click to turn ${toggle ? "off" : "on"} typing effect`}
-          >
-            <span>&lt;{text}/&gt;</span>
-          </Tooltip>
+        <p className="cursor-pointer w-1/2 leading-4 dark:text-white">
+          <span>&lt; Welcome to my Portfolio! /&gt;</span>
         </p>
         <div className="w-1/2 flex items-center justify-end h-full gap-10">
           <p className="leading-4 text-right dark:text-white">

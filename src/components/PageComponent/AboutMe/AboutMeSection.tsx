@@ -17,7 +17,7 @@ export const AboutMeSection = () => {
     <div
       id="about"
       ref={elementRef}
-      className={`h-fit lg:min-h-screen w-full dark:text-white flex flex-col items-center transition-all duration-500 relative text-black overflow-hidden ${
+      className={`h-fit lg:min-h-screen w-full dark:text-white flex flex-col items-center transition-all duration-500 relative text-black overflow-hidden animate_quick_scale ${
         onFocus
           ? "justify-start lg:justify-center items-end ~pt-28/36"
           : "justify-center items-end ~pt-16/40"

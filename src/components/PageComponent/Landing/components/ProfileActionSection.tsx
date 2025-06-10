@@ -6,6 +6,7 @@ export const ProfileActionSection = () => {
   return (
     <div className="w-full flex flex-col gap-5 leading-[1vw] ~text-xs/lg items-start lg:w-3/5 mt-5">
       <CustomButton
+        id="personal-info-button"
         onClick={() => scrollTo("about", 50)}
         className="~p-2/5 text-left h-fit w-full lg:w-4/5"
       >
@@ -15,6 +16,7 @@ export const ProfileActionSection = () => {
         <p className="italic leading-4 text-xs">Who am I?</p>
       </CustomButton>
       <CustomButton
+        id="options-button"
         onClick={() => scrollTo("portfolio", 50)}
         className="~p-2/5 text-left  h-fit leading-4 lg:w-3/5"
       >
@@ -24,10 +26,14 @@ export const ProfileActionSection = () => {
         </p>
       </CustomButton>
       <div className="w-full lg:w-[85%] gap-5 flex">
-        <CustomButton className="~p-2/5 w-1/2 text-left ">
+        <CustomButton
+          id="contact-me-button"
+          onClick={() => scrollTo("contact-me", 50)}
+          className="~p-2/5 w-1/2 text-left "
+        >
           <p className="uppercase font-bold ~text-xs/lg">Contact Me</p>
         </CustomButton>
-        <CustomButton className="~p-2/5 w-1/2 text-left ">
+        <CustomButton id="download-button" className="~p-2/5 w-1/2 text-left ">
           <p className="uppercase font-bold ~text-xs/lg">Download</p>
           <p className="italic text-xs">Resume</p>
         </CustomButton>

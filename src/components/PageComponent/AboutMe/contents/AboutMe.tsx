@@ -20,17 +20,20 @@ export const AboutMe = ({ label }: Props) => {
           and precision, bringing a unique touch to every project.
         </p>
         <div className="flex flex-wrap items-center justify-center gap-2 px-5">
-          <CustomButton className="flex-grow px-5 py-3 flex">
+          <CustomButton
+            id="web-app-button"
+            className="flex-grow px-5 py-3 flex"
+          >
             <p className="text-xs text-left">&lt;&#8725;&gt;</p>
             <p className="mt-1">Web Applications</p>
           </CustomButton>
-          <CustomButton className="flex-grow px-5 py-3 flex">
+          <CustomButton id="media-button" className="flex-grow px-5 py-3 flex">
             <div>
               <LuClapperboard />
             </div>
             <p className="mt-1">Multi Media</p>
           </CustomButton>
-          <CustomButton className="flex-grow px-5 py-3 flex">
+          <CustomButton id="3d-button" className="flex-grow px-5 py-3 flex">
             <div>
               <HiOutlineCube />
             </div>{" "}

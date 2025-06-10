@@ -1,7 +1,8 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import {
   AboutMeSection,
   ContactMe,
+  Footer,
   LandingSection,
   SampleWorks,
   ScrollToTop,
@@ -9,8 +10,10 @@ import {
 import Layout from "./layout/Layout";
 import { useAtomValue } from "jotai";
 import { themeAtom } from "./atomic/atomic";
+import { LoadingScreen } from "./components/LoadingScreen/LoadingScreen";
 
 function App() {
+  const [isLoading, setIsLoading] = useState<boolean>(true);
   const isDark = useAtomValue(themeAtom);
 
   useEffect(() => {
@@ -22,13 +25,26 @@ function App() {
     }
   }, [isDark]);
 
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+  }, []);
+
   return (
     <Layout>
-      <LandingSection />
-      <AboutMeSection />
-      <SampleWorks />
-      <ContactMe />
-      <ScrollToTop />
+      {isLoading ? (
+        <LoadingScreen />
+      ) : (
+        <>
+          <LandingSection />
+          <AboutMeSection />
+          <SampleWorks />
+          <ContactMe />
+          <ScrollToTop />
+          <Footer />
+        </>
+      )}
     </Layout>
   );
 }

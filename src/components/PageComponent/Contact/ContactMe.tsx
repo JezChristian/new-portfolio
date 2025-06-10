@@ -14,24 +14,30 @@ export const ContactMe = () => {
 
   const submitFormHandler = (value: ContactMeType) => {
     console.log("Submitted Values : ", value);
-    toast.success("Sample Send Success", {
+    toast.success("Sample Send Success. ( Not yet working :) )", {
       position: "top-center",
       id: "toast-update-account-success",
     });
   };
   return (
-    <div className="flex w-full h-fit lg:h-screen pt-10 flex-col items-center justify-center gap-5">
+    <div
+      id="contact-me"
+      className="flex w-full h-fit lg:h-screen pt-10 flex-col items-center justify-center gap-5 animate_quick_scale"
+    >
       <div className="w-2/3 lg:w-1/3 h-fit gap-5 flex flex-col">
         <p className="font-semibold ~text-3xl/5xl mb-5 font-Lexend self-center">
           Contact Me!
         </p>
-        <CustomButton className=" py-10 px-5 flex flex-col ">
-          <div className="flex gap-5">
+        <CustomButton
+          id="form-container"
+          className=" py-10 px-5 flex flex-col "
+        >
+          <div className="flex-col lg:flex-row flex gap-5">
             <ControlledTextfield control={control} name="name" label="Name" />
             <ControlledTextfield
               control={control}
               name="mobile_number"
-              label="Phone Number"
+              label="Phone #"
             />
           </div>
           <div className="flex flex-col gap-5 mt-5">
@@ -45,6 +51,7 @@ export const ContactMe = () => {
           </div>
         </CustomButton>
         <CustomButton
+          id="form-submit-button"
           onClick={handleSubmit(submitFormHandler)}
           className="w-36 py-3 self-end"
         >

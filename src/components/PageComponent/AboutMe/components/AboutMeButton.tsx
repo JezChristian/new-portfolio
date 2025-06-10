@@ -43,6 +43,7 @@ export const AboutMeButton = ({ setOnFocus, onFocus }: AboutMeButtonProps) => {
       >
         {!onFocus && (
           <CustomButton
+            id="go-back-button"
             onClick={() => {
               handleResetSelected("");
               scrollTo("about", 60);
@@ -71,6 +72,7 @@ export const AboutMeButton = ({ setOnFocus, onFocus }: AboutMeButtonProps) => {
             }`}
           >
             <CustomButton
+              id="about-me-button"
               onClick={() => {
                 handleSelected("About Me");
                 scrollTo("about", 50);
@@ -92,6 +94,7 @@ export const AboutMeButton = ({ setOnFocus, onFocus }: AboutMeButtonProps) => {
               )}
             </CustomButton>
             <CustomButton
+              id="edu-bg-button"
               onClick={() => handleSelected("Educational Background")}
               className={`~text-sm/lg leading-5 flex items-center justify-center ${
                 onFocus ? "w-48 ~h-20/28 lg:h-60" : "w-14 h-14"
@@ -110,6 +113,7 @@ export const AboutMeButton = ({ setOnFocus, onFocus }: AboutMeButtonProps) => {
               )}
             </CustomButton>
             <CustomButton
+              id="work-exp-button"
               onClick={() => {
                 handleSelected("Work Experience");
                 scrollTo("about", 50);
@@ -131,6 +135,7 @@ export const AboutMeButton = ({ setOnFocus, onFocus }: AboutMeButtonProps) => {
               )}
             </CustomButton>
             <CustomButton
+              id="tools-button"
               onClick={() => {
                 handleSelected("Tools Used");
                 scrollTo("about", 50);

@@ -1,8 +1,16 @@
 /** @type {import('tailwindcss').Config} */
+import fluid, { extract, screens, fontSize } from "fluid-tailwind";
+
 export default {
-  darkMode: "selector",
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  darkMode: "class",
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}", extract],
   theme: {
+    screens,
+    fontSize,
+    fontFamily: {
+      Poppins: ["Poppins"],
+      Lexend: ["Lexend"],
+    },
     extend: {
       backgroundImage: {
         "home-black-radial":
@@ -22,5 +30,5 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [fluid],
 };

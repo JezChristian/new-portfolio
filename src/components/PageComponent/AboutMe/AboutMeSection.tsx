@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { AboutMeButton } from "./components/AboutMeButton";
 import { useAtom } from "jotai";
 import { aboutMeAtom } from "../../../atomic/atomic";
@@ -10,43 +10,17 @@ import { WorkExperience } from "./contents/WorkExperience";
 
 export const AboutMeSection = () => {
   const [onFocus, setOnFocus] = useState<boolean>(true);
-  const [, setIsVisible] = useState<boolean>(true);
-  const [selectedAboutMe, setSelectedAboutMe] = useAtom(aboutMeAtom);
+  const [selectedAboutMe] = useAtom(aboutMeAtom);
   const elementRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsVisible(entry.isIntersecting);
-        if (!entry.isIntersecting) {
-          resetState();
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (elementRef.current) {
-      observer.observe(elementRef.current);
-    }
-
-    return () => {
-      if (elementRef.current) {
-        observer.unobserve(elementRef.current);
-      }
-    };
-  }, []);
-
-  const resetState = () => {
-    setSelectedAboutMe("");
-    setIsVisible(false);
-  };
 
   return (
     <div
       id="about"
       ref={elementRef}
-      className={`min-h-screen h-fit w-full dark:text-white flex flex-col items-center transition-all duration-500 relative text-black overflow-hidden ${
-        onFocus ? "justify-center items-end" : "justify-center items-end pt-40"
+      className={`h-fit lg:min-h-screen w-full dark:text-white flex flex-col items-center transition-all duration-500 relative text-black overflow-hidden ${
+        onFocus
+          ? "justify-start lg:justify-center items-end"
+          : "justify-center items-end ~pt-16/40"
       }`}
     >
       {SelectedAboutMe(selectedAboutMe)}

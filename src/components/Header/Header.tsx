@@ -32,7 +32,7 @@ export const Header = () => {
   };
 
   return (
-    <div className="sticky top-0 flex items-end flex-col z-50 dark:text-white">
+    <div className="sticky w-full top-0 flex items-end flex-col z-50 dark:text-white h-28">
       <div
         className={`py-4 h-fit px-5 flex w-full font-semibold text-md transition-all duration-300 bg-white bg-opacity-5 backdrop-blur-sm items-center ${
           isScrolled && "shadow-lg bg-white bg-opacity-40 text-black"

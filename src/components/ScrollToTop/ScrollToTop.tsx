@@ -7,10 +7,12 @@ export const ScrollToTop = () => {
   const { isScrolled, scrollTop } = useScroll();
   const isDark = useAtomValue(themeAtom);
 
+  console.log("isScrolled :", isScrolled);
+
   return (
     <button
       onClick={scrollTop}
-      className={` h-14 w-14 rounded-full fixed bottom-10 right-10 transition-all duration-300  flex items-center justify-center  ${
+      className={` h-14 w-14 rounded-full fixed bottom-10 right-10 transition-all duration-300  flex items-center justify-center z-50 ${
         isScrolled ? " scale-100 " : " scale-0"
       }
         ${isDark ? " neumorphic-dark " : " neumorphic-light "}

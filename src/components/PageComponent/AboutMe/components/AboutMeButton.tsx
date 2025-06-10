@@ -6,6 +6,7 @@ import { CustomButton } from "../../../CustomButton/CustomButton";
 import { useAtom } from "jotai";
 import { aboutMeAtom } from "../../../../atomic/atomic";
 import { useEffect } from "react";
+import { useScroll } from "../../../../hooks/useScroll";
 
 interface AboutMeButtonProps {
   setOnFocus: (value: boolean) => void;
@@ -13,6 +14,7 @@ interface AboutMeButtonProps {
 }
 
 export const AboutMeButton = ({ setOnFocus, onFocus }: AboutMeButtonProps) => {
+  const { scrollTo } = useScroll();
   const [selectedItem, setSelectedItem] = useAtom(aboutMeAtom);
 
   const handleSelected = (item: string) => {
@@ -31,9 +33,9 @@ export const AboutMeButton = ({ setOnFocus, onFocus }: AboutMeButtonProps) => {
   }, [selectedItem]);
 
   return (
-    <div className="h-fit w-full over">
+    <div className="h-fit w-full ">
       <div
-        className={` items-center transition-all duration-500 sticky bottom-10  self-start rounded-xl  ${
+        className={`items-center transition-all duration-500 sticky bottom-10 self-start rounded-xl  ${
           onFocus
             ? "w-full h-fit gap-10 py-5 flex flex-col  justify-end "
             : "w-fit h-28 py-2 ml-2 scale-75 flex gap-5 justify-start"
@@ -41,7 +43,10 @@ export const AboutMeButton = ({ setOnFocus, onFocus }: AboutMeButtonProps) => {
       >
         {!onFocus && (
           <CustomButton
-            onClick={() => handleResetSelected("")}
+            onClick={() => {
+              handleResetSelected("");
+              scrollTo("about", 60);
+            }}
             className="p-2 min-w-9"
           >
             <IoMdArrowRoundBack />
@@ -56,19 +61,22 @@ export const AboutMeButton = ({ setOnFocus, onFocus }: AboutMeButtonProps) => {
         >
           <p
             className={` font-medium text-black dark:text-white text-center
-  ${onFocus ? "text-4xl" : "text-md self-start pb-2"}`}
+  ${onFocus ? "~text-2xl/4xl" : "text-md self-start pb-2"}`}
           >
             Know me more
           </p>
           <div
             className={`h-fit flex flex-wrap items-center justify-center gap-3 transition-all duration-500  ${
-              onFocus ? "w-fit min-h-60  " : " w-full min-w-[280px]"
+              onFocus ? "w-fit ~min-h-40/60 " : " w-full min-w-[280px]"
             }`}
           >
             <CustomButton
-              onClick={() => handleSelected("About Me")}
-              className={`text-lg leading-5 flex items-center justify-center ${
-                onFocus ? "w-48 h-28 lg:h-60" : "w-14 h-14"
+              onClick={() => {
+                handleSelected("About Me");
+                scrollTo("about", 50);
+              }}
+              className={`~text-sm/lg leading-5 flex items-center justify-center ${
+                onFocus ? "w-48 ~h-20/28 lg:h-60" : "w-14 h-14"
               }`}
             >
               {onFocus ? (
@@ -85,8 +93,8 @@ export const AboutMeButton = ({ setOnFocus, onFocus }: AboutMeButtonProps) => {
             </CustomButton>
             <CustomButton
               onClick={() => handleSelected("Educational Background")}
-              className={`text-lg leading-5 flex items-center justify-center ${
-                onFocus ? "w-48 h-28 lg:h-60" : "w-14 h-14"
+              className={`~text-sm/lg leading-5 flex items-center justify-center ${
+                onFocus ? "w-48 ~h-20/28 lg:h-60" : "w-14 h-14"
               }`}
             >
               {onFocus ? (
@@ -102,9 +110,12 @@ export const AboutMeButton = ({ setOnFocus, onFocus }: AboutMeButtonProps) => {
               )}
             </CustomButton>
             <CustomButton
-              onClick={() => handleSelected("Work Experience")}
-              className={`text-lg leading-5 flex items-center justify-center px-5 ${
-                onFocus ? "w-48 h-28 lg:h-60" : "w-14 h-14"
+              onClick={() => {
+                handleSelected("Work Experience");
+                scrollTo("about", 50);
+              }}
+              className={`~text-sm/lg leading-5 flex items-center justify-center px-5 ${
+                onFocus ? "w-48 ~h-20/28 lg:h-60" : "w-14 h-14"
               }`}
             >
               {onFocus ? (
@@ -120,9 +131,12 @@ export const AboutMeButton = ({ setOnFocus, onFocus }: AboutMeButtonProps) => {
               )}
             </CustomButton>
             <CustomButton
-              onClick={() => handleSelected("Tools Used")}
-              className={`text-lg leading-5 flex items-center justify-center ${
-                onFocus ? "w-48 h-28 lg:h-60" : "w-14 h-14"
+              onClick={() => {
+                handleSelected("Tools Used");
+                scrollTo("about", 50);
+              }}
+              className={`~text-sm/lg leading-5 flex items-center justify-center ${
+                onFocus ? "w-48 ~h-20/28 lg:h-60" : "w-14 h-14"
               }`}
             >
               {onFocus ? (

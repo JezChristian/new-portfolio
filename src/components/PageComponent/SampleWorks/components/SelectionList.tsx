@@ -22,7 +22,7 @@ export const SelectionList = ({
   };
 
   return (
-    <div className="flex gap-2 pb-5">
+    <div className="flex gap-2 pb-5 flex-wrap justify-center">
       {CategorySelection.length > 0 &&
         CategorySelection.map((category, index) => (
           <div

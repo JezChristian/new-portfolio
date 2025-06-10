@@ -16,7 +16,9 @@ const Layout: React.FC<PropsWithChildren> = ({ children }) => {
     >
       <div className="dark:text-white text-black container">
         <Header />
-        <div className="w-full h-full overflow-hidden pt-12">{children}</div>
+        <div className="w-full h-full overflow-hidden pt-12 lg:pb-0 pb-36">
+          {children}
+        </div>
       </div>
     </div>
   );

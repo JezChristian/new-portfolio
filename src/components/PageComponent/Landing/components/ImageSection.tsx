@@ -10,7 +10,7 @@ export const ImageSection = () => {
       <img
         src={ImageTwo}
         alt="ImageTwo"
-        className="animate-floatTwo ~w-16/52 min-w-[70px]"
+        className="animate-floatTwo ~w-16/52 min-w-[70px] "
       />
       <img
         src={ImageOne}

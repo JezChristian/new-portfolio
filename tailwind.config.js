@@ -30,5 +30,17 @@ export default {
       },
     },
   },
-  plugins: [fluid],
+  plugins: [
+    fluid,
+    function ({ addUtilities }) {
+      addUtilities({
+        ".float-One-custom": {
+          transform: "rotate3d(-0.65, -0.2, 0.6, 25deg)",
+        },
+        ".float-Two-custom": {
+          transform: "rotate3d(1, 1, 0, 45deg)",
+        },
+      });
+    },
+  ],
 };

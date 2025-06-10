@@ -10,17 +10,17 @@ export const ImageSection = () => {
       <img
         src={ImageTwo}
         alt="ImageTwo"
-        className="animate-floatTwo ~w-16/52 min-w-[70px] "
+        className="animate-floatTwo ~w-16/52 min-w-[70px] float-Two-custom"
       />
       <img
         src={ImageOne}
         alt="ImageOne"
-        className="animate-floatOne ~w-16/44 min-w-[70px]"
+        className="animate-floatOne ~w-16/44 min-w-[70px] float-One-custom"
       />
       <img
         src={ImageThree}
         alt="ImageThree"
-        className="animate-floatTwo ~w-16/52 min-w-[70px]"
+        className="animate-floatTwo ~w-16/52 min-w-[70px] float-Two-custom"
       />
     </div>
   );

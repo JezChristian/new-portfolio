@@ -66,7 +66,7 @@ export const ToolsUsed = ({ label }: Props) => {
             id="programming-button"
             className={`w-48 h-16 p-5 transition-all duration-1000 hover:rounded-full ${
               selected == 0 && "font-bold underline"
-            } lg:animate-floatOne`}
+            } lg:animate-floatOne lg:float-One-custom`}
             onClick={() => setSelected(0)}
           >
             Programming
@@ -75,7 +75,7 @@ export const ToolsUsed = ({ label }: Props) => {
             id="multi-media-button"
             className={`w-48 h-16 p-5 transition-all duration-1000 hover:rounded-full ${
               selected == 1 && "font-bold underline"
-            } lg:animate-floatTwo`}
+            } lg:animate-floatTwo lg:float-Two-custom`}
             onClick={() => setSelected(1)}
           >
             Multimedia
@@ -84,7 +84,7 @@ export const ToolsUsed = ({ label }: Props) => {
             id="3d-softwares-button"
             className={`w-48 h-16 p-5 transition-all duration-1000 hover:rounded-full ${
               selected == 2 && "font-bold underline"
-            } lg:animate-floatOne`}
+            } lg:animate-floatOne lg:float-One-custom`}
             onClick={() => setSelected(2)}
           >
             3D Softwares

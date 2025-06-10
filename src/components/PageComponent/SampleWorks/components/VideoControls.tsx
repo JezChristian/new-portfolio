@@ -21,13 +21,16 @@ export const VideoControl = ({
   return (
     <div
       onClick={(e) => e.stopPropagation()}
-      className="flex gap-2 justify-between items-center relative bottom-0 right-0 pt-2"
+      className="flex gap-2 justify-between items-center relative bottom-0 right-0 pt-2 flex-wrap w-full"
     >
       <CustomButton className="text-[.7rem] py-2 px-5">
         View Description
       </CustomButton>
-      <div className="flex gap-2">
-        <CustomButton onClick={handlePlay} className="px-5 py-2">
+      <div className="flex gap-2 flex-wrap flex-grow lg:flex-grow-0 ">
+        <CustomButton
+          onClick={handlePlay}
+          className="px-5 py-2 flex flex-grow justify-center lg:flex-grow-0"
+        >
           {play ? (
             <div className="flex items-center justify-center gap-2 text-xs">
               <IoMdPause /> {!toggleView && "Pause"}
@@ -38,7 +41,10 @@ export const VideoControl = ({
             </div>
           )}
         </CustomButton>
-        <CustomButton onClick={() => setMute(!mute)} className="px-5 py-2">
+        <CustomButton
+          onClick={() => setMute(!mute)}
+          className="px-5 py-2 flex flex-grow justify-center lg:flex-grow-0"
+        >
           {mute ? (
             <div className="flex items-center justify-center gap-2 text-xs">
               <PiSpeakerSlashBold /> {!toggleView && "Unmute"}

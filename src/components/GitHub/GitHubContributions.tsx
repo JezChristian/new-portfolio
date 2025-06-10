@@ -8,11 +8,11 @@ export const GitHubContributions = () => {
 
   return (
     <div className="w-full px-5 py-3 flex flex-col items-start justify-center">
-      <div className="text-lg font-bold flex gap-5 my-2">
+      <div className="~text-sm/lg font-bold flex gap-5 my-2">
         <span>
           <GitHubIcon />
         </span>
-        <p>Github Contributions</p>
+        <p>Github Live Update Contributions</p>
       </div>
       <GitHubCalendar
         transformData={(contributions) =>

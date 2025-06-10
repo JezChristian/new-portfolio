@@ -1,31 +1,33 @@
-import { useAtomValue } from "jotai";
+import { useEffect } from "react";
 import {
   AboutMeSection,
-  Header,
   LandingSection,
   SampleWorks,
   ScrollToTop,
 } from "./components";
+import Layout from "./layout/Layout";
+import { useAtomValue } from "jotai";
 import { themeAtom } from "./atomic/atomic";
 
 function App() {
   const isDark = useAtomValue(themeAtom);
+
+  useEffect(() => {
+    const root = document.documentElement;
+    if (isDark) {
+      root.classList.add("dark");
+    } else {
+      root.classList.remove("dark");
+    }
+  }, [isDark]);
+
   return (
-    <div
-      className={`dark:text-white text-black h-fit min-h-screen max-w-screen ${
-        isDark
-          ? "dark bg-home-black-radial animate_quick_scale"
-          : "bg-home-white-gradient animate_quick_scale_down"
-      }`}
-    >
-      <Header />
-      <div className="w-full flex flex-col items-center">
-        <LandingSection />
-        <AboutMeSection />
-        <SampleWorks />
-        <ScrollToTop />
-      </div>
-    </div>
+    <Layout>
+      <LandingSection />
+      <AboutMeSection />
+      <SampleWorks />
+      <ScrollToTop />
+    </Layout>
   );
 }
 

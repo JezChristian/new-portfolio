@@ -221,10 +221,23 @@
 }
 
 /* Hide default HTML checkbox */
-#toggle {
+/* #toggle {
   opacity: 0;
   width: 0;
   height: 0;
+} */
+#toggle {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  opacity: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+
+#theme-toggle-button {
+  position: relative;
+  display: inline-block;
 }
 
 #container,

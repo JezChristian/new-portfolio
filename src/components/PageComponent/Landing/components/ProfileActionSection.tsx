@@ -18,7 +18,7 @@ export const ProfileActionSection = () => {
       <CustomButton
         id="options-button"
         onClick={() => scrollTo("portfolio", 50)}
-        className="~p-2/5 text-left  h-fit leading-4 lg:w-3/5"
+        className="~p-2/5 text-left  h-fit leading-4 w-full lg:w-3/5"
       >
         <p className="uppercase font-bold ~text-xs/lg">My Portfolio</p>
         <p className="leading-3 transition-all duration-300 text-xs">

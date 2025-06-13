@@ -14,6 +14,7 @@ export const GitHubContributions = () => {
         </span>
         <p>Github Live Update Contributions</p>
       </div>
+
       <GitHubCalendar
         transformData={(contributions) =>
           contributions.filter((day) => new Date(day.date) >= lastSixMonths)

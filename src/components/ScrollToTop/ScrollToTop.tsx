@@ -7,8 +7,6 @@ export const ScrollToTop = () => {
   const { isScrolled, scrollTop } = useScroll();
   const isDark = useAtomValue(themeAtom);
 
-  console.log("isScrolled :", isScrolled);
-
   return (
     <button
       id="scroll-to-top-button"

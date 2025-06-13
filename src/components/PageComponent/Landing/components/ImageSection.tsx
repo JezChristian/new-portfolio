@@ -6,7 +6,7 @@ import {
 
 export const ImageSection = () => {
   return (
-    <div className="w-full h-full flex items-center justify-center mb-10 lg:w-2/5 lg:items-start lg:justify-start lg:-ml-14">
+    <div className="w-full h-full flex items-center justify-center mb-10 lg:w-2/5 lg:items-start lg:justify-start lg:-ml-14 animate_quick_scale">
       <img
         src={ImageTwo}
         alt="ImageTwo"
